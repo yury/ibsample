@@ -9,10 +9,10 @@ class ViewController < UIViewController
     label.text = "Click the button"
   end
 
-  def click button
+  def touch button
     @counter += 1
-    label.text = "Clicked #{@counter} times"
+    label.text = "Touched #{@counter} times"
   end
 
-  ib_action :click
+  ib_action :touch
 end

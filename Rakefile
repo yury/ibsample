@@ -2,14 +2,15 @@
 $:.unshift("/Library/RubyMotion/lib")
 require 'motion/project'
 
-require 'bundler/setup'
-Bundler.setup
+# if you use bundler
+require 'bundler'
+Bundler.require
 
-require 'ib/tasks'
+# if you are not using bundler
+# require 'rubygems'
+# require 'ib'
 
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
   app.name = 'IBSample'
-
-  app.files.unshift IB::PATH
 end

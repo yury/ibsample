@@ -1,8 +1,7 @@
 class ViewController < UIViewController
   extend IB
 
-  attr_accessor :label
-  ib_outlet :label, UILabel
+  outlet_accessor :label, UILabel
 
   def viewWillAppear animated
     @counter = 0
@@ -14,5 +13,4 @@ class ViewController < UIViewController
     label.text = "Touched #{@counter} times"
   end
 
-  ib_action :touch
 end
